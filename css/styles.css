@@ -30,3 +30,7 @@ display: inline-block;
   justify-content: center;
   align-items: center;
 }
+
+.carousel-inner> .item > img {
+  width:100%;
+}
