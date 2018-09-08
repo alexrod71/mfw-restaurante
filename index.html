@@ -1,13 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Restaurante</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Restaurante</title>
   <link rel="stylesheet" href="css/reset.css">
-    <link rel="stylesheet" href="css/bootstrap.min.css">
-    <link rel="stylesheet" href="css/font-awesome.min.css">
-    <link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/styles.css">
 </head>
 <body data-spy="scroll" data-target="#navbar-scroll">
   <div class="container-fluid">
@@ -16,7 +16,7 @@
         <div class="logo">
           <img src="img/name-01.png" alt="Restaurante Logo">
         </div>
-        <nav id="navbar-scroll" class="navbar pull-right">
+        <nav id="navbar-scroll" class="navbar">
           <ul class="nav nav-pills" role="tablist">
             <li><a href="#home">Home</a></li>
             <li><a href="#story">Our Story</a></li>
@@ -33,6 +33,7 @@
           <li data-target="#carousel-example-generic" data-slide-to="1"></li>
           <li data-target="#carousel-example-generic" data-slide-to="2"></li>
         </ol>
+
         <!-- Wrapper for slides -->
         <div class="carousel-inner" role="listbox">
           <div class="item active">
@@ -44,20 +45,21 @@
           <div class="item">
             <img src="img/farm-2.jpg" alt="Landscape of a beautiful farm">
             <div class="carousel-caption">
-                        <h2>From fam to table</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores nesciunt similique, eaque, maiores eveniet a in sint nam! Labore, voluptatem?</p>
-                        <button class="btn btn-warning" type="button" name="button">Browse Gallery</button>
-                        </div>
+              <h2>From farm to table.</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eligendi tempore porro dolorem non nobis consequuntur, aut saepe ipsum cupiditate eum iusto totam distinctio placeat facere, fuga deleniti quisquam! Animi.</p>
+              <button class="btn btn-danger" type="button" name="button">Browse Gallery</button>
+            </div>
           </div>
           <div class="item">
-            <img src="img/restaurant-2.jpg" alt="Dim restaurant interior">
+            <img src="img/restaurant-2-crop.jpg" alt="Dim restaurant interior">
             <div class="carousel-caption">
-                            <h2>tAbLe t0 fArM fROm</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores nesciunt similique, eaque, maiores eveniet a in sint nam! Labore, voluptatem?</p>
-                            <button class="btn btn-warning" type="button" name="button">Browse Gallery</button>
+              <h2>From farm to table.</h2>
+              <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus eligendi tempore porro dolorem non nobis consequuntur, aut saepe ipsum cupiditate eum iusto totam distinctio placeat facere, fuga deleniti quisquam! Animi.</p>
+              <button class="btn btn-danger" type="button" name="button">Browse Gallery</button>
             </div>
           </div>
         </div>
+
         <!-- Controls -->
         <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
           <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
@@ -69,39 +71,55 @@
         </a>
       </div>
     </div> <!-- Home End -->
+
     <div id="story" class="row"> <!-- Story Start -->
-        <div class="col-md-10 container-border">
-            <div class="col-md-6 story-left">
-                <h2 class="story-header">Our Story, Homie</h2>
-                <P class="story-tag font-bold">One Man, ALONE. BETRAYED BY the Country he LOVES</P>
-            </div>
-            <div class="col-md-6 story-right ">
-                <h2 class=year>1989</h2>
-                <div>
-                <p>history and more history history and more history history and more history history and more history history and more history history and more history .</p>
-                <p>history and more history history and more history history and more history history and more history history and more history history and more history history and more history history and more history history and more history history and more history history and more history history and more history .</p>
-                <p>History.</p>
-                <p>history and more history history and more history history and more history history and more history history and more history history and more history history and more history history and more history history and more history history and more history history and more history history and more history .</p>
-                </div>
-            </div>
+      <div class="col-md-10 container-border">
+        <div class="col-md-6 story-left">
+          <h2 class="story-header">Our Story</h2>
+          <p class="story-tag font-bold">One Man. One Dream.</p>
         </div>
+        <div class="col-md-6 story-right">
+          <h2 class="year">1989</h2>
+          <div>
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sed dolor alias deleniti quae adipisci blanditiis facilis omnis, laboriosam molestias esse expedita vitae nulla minima consectetur sit repellat nostrum natus voluptatibus.</p>
+            <p>Corrupti sed quam, hic eos similique illum quae amet sapiente architecto dolores vitae omnis obcaecati voluptate tempora nemo ut aliquam saepe sit esse nihil sint vel, minima commodi. Dolorum, mollitia.</p>
+            <p>Corrupti facilis quaerat atque laborum, cumque deserunt culpa, suscipit! Aliquam eligendi laboriosam id architecto unde quam nisi, nesciunt veritatis voluptates, omnis vero reiciendis expedita dolor iste repellat itaque illo sint.</p>
+            <p>Nesciunt veniam temporibus deserunt, vero, deleniti quasi aliquid hic quos dolorum esse ullam doloremque soluta. At deserunt dignissimos, veritatis ipsa adipisci ratione earum corporis, facere atque ut incidunt! Possimus, recusandae?</p>
+          </div>
+        </div>
+      </div>
     </div> <!-- Story End -->
     <div id="review" class="row"> <!-- Review Start -->
-            <div class="col-md-8 review-info">
-            <h2 class="review-header">Fresno Beer</h2>
-            <p class=:"review-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor ullam consequuntur molestiae eum officiis adipisci, laboriosam deserunt velit necessitatibus nihil.</p>
-            </div>
+      <div class="col-md-8 review-info">
+        <h2 class="review-header">Fresno Bee</h2>
+        <p class="review-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sed suscipit, nemo quas tenetur, at praesentium, impedit adipisci ipsam soluta ad accusamus! Porro ex provident velit distinctio necessitatibus dignissimos, expedita.</p>
+      </div>
     </div> <!-- Review End -->
     <div id="menu" class="row"> <!-- Menu Start -->
+
     </div> <!-- Menu End -->
     <div id="contact" class="row"> <!-- Contact Start -->
+
     </div> <!-- Contact End -->
   </div>
-    <!-- JavaScript   -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
+	<!-- JavaScript	 -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
   <script type="text/javascript">
-    $('body').scrollspy({ target: '#navbar-scroll' });
+    $(document).ready(function() {
+      $('body').scrollspy({target: "#navbar-scroll", offset: 50});
+      $(".navbar a").on('click', function(event) {
+        if (this.hash !== "") {
+          event.preventDefault();
+          const hash = this.hash;
+          $('html, body').animate({
+            scrollTop: $(hash).offset().top
+          }, 800, function(){
+            window.location.hash = hash;
+          });
+        }
+      });
+    });
   </script>
 </body>
 </html>
