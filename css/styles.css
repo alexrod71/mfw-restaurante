@@ -66,6 +66,12 @@ header {
 
 .nav-pills > li + li {
   margin-left: 0;
+} */
+
+span.fa.fa-bars {
+  color: var(--dark-shadow);
+  font-size: 25px;
+  text-shadow: 1px 1px 3px var(--dark-shadow);
 }
 
 .logo {
@@ -158,13 +164,13 @@ header {
   text-align: center;
   padding: 20px;
 }
-
+/*
 .review-header {
   color: var(--orange);
   font-family: var(--lobster);
   font-size: 70px;
   text-shadow: 1px 1px 3px var(--dark-shadow);
-}
+} */
 
 .review-body {
   color: var(--white);
@@ -173,9 +179,22 @@ header {
 }
 
 #menu {
-  background: rebeccapurple;
+  background:url('../img/black_linen.png')
+  background-size: cover;
+  flex-direction: column;
+}
+
+#menu .section-header {
+  color: white;
+}
+
+.tab-pane {
+  height: 500px;
+  background: #fff;
 }
 
 #contact {
   background: dodgerblue;
 }
+
+@media screen and (max-width:767px;)

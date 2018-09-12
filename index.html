@@ -16,7 +16,20 @@
         <div class="logo">
           <img src="img/name-01.png" alt="Restaurante Logo">
         </div>
+
         <nav id="navbar-scroll" class="navbar">
+
+		  	<div class="navbar-header">
+         <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar-collapse" aria-expanded="false">
+         <span class="sr-only">Toggle navigation</span>
+    <span class="fa fa-bars" aria-hidden="true"></span>
+	</button>
+	<div class="logo">
+	<img src="img/name-01.png" alt="Restaurant Logo">
+  </div>
+</div>
+
+				<div class="pull-right collapse navbar-collapse" id="navbar-collapse">
           <ul class="nav nav-pills" role="tablist">
             <li><a href="#home">Home</a></li>
             <li><a href="#story">Our Story</a></li>
@@ -95,9 +108,68 @@
         <p class="review-body">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium sed suscipit, nemo quas tenetur, at praesentium, impedit adipisci ipsam soluta ad accusamus! Porro ex provident velit distinctio necessitatibus dignissimos, expedita.</p>
       </div>
     </div> <!-- Review End -->
-    <div id="menu" class="row"> <!-- Menu Start -->
 
-    </div> <!-- Menu End -->
+    <div id="menu" class="row"> <!-- Menu Start -->
+    <h2 class="section-header text-center">Menu</h2>
+    </div>
+
+		<div class="col-md-10 col-sm-offset-1">
+  <!-- Nav tabs -->
+  <ul class="nav nav-tabs" role="tablist">
+    <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+    <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+    <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+    <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+  </ul>
+
+  <!-- Tab panes -->
+  <div class="tab-content">
+    <div role="tabpanel" class="tab-pane active" id="home">...</div>
+		<div class="col-sm-3">
+			<img class="img-responsive" src="img/brushetta.jpg" alt="Delicious appetizer">
+		<h3>App 1</h3>
+		<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis tempore hic itaque quaerat qui, sequi laudantium, placeat cumque est dolorum impedit iste vero distinctio eaque inventore, beatae reprehenderit eveniet quia?</p>
+	</div>
+	<div class="col-sm-3">
+		<img class="img-responsive" src="img/dip.jpg"
+		alt="Delicious appetizer">
+	<h3>App 2</h3>
+	<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis tempore hic itaque quaerat qui, sequi laudantium, placeat cumque est dolorum impedit iste vero distinctio eaque inventore, beatae reprehenderit eveniet quia?</p>
+</div>
+<div class="col-sm-3">
+	<img class="img-responsive" src="img/dessert3.jpg"
+	alt="Delicous apetizer">
+<h3>App 3</h3>
+<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis tempore hic itaque quaerat qui, sequi laudantium, placeat cumque est dolorum impedit iste vero distinctio eaque inventore, beatae reprehenderit eveniet quia?</p>
+</div>
+<div class="col-sm-3">
+	<img class="img-responsive" src="img/dessert4.jpg"
+	alt="Delicous appetizer">
+<h3>App 4</h3>
+<p> Lorem ipsum dolor sit amet, consectetur adipisicing elit. Omnis tempore hic itaque quaerat qui, sequi laudantium, placeat cumque est dolorum impedit iste vero distinctio eaque inventore, beatae reprehenderit eveniet quia?</p>
+</div>
+</div*4>
+</div
+
+
+
+
+
+
+
+
+
+
+    <div role="tabpanel" class="tab-pane" id="profile">...</div>
+
+    <div role="tabpanel" class="tab-pane" id="messages">...</div>
+	</div>
+    <div role="tabpanel" class="tab-pane" id="settings">...</div>
+  </div>
+ </div>
+
+</div>  <!--Menu End-->
+
     <div id="contact" class="row"> <!-- Contact Start -->
 
     </div> <!-- Contact End -->
@@ -106,7 +178,41 @@
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 	<script src="js/bootstrap.min.js"></script>
   <script type="text/javascript">
-    $(document).ready(function() {
+	$(document).ready(function() {
+  	$('a[href="#appetizer"]').click(function (e) {
+			e.preventDefault()
+			$(this).tab('show')
+		})
+
+		$('a[href="#lunch"]').click(function (e) {
+			e.preventDefault()
+			$(this).tab('show')
+		})
+
+		$('a[href="#dinner"]').click(function (e) {
+			e.preventDefault()
+			$(this).tab('show')
+		})
+
+		$('a[href="#desert"]').click(function (e) {
+			e.preventDefault()
+			$(this).tab('show')
+		})
+
+		$('body').scrollspy({target: "#navbar-scroll", offset: 50});
+		$(".navbar a").on('click', function(event) {
+			if (this.hash !== "") {
+				event.preventDefault();
+				const hash = this.hash;
+				$('html, body').animate({
+					scrollTop: $(hash).offset().top
+				}, 800, function(){
+					window.location.hash = hash;
+				});
+			}
+		});
+	});
+
       $('body').scrollspy({target: "#navbar-scroll", offset: 50});
       $(".navbar a").on('click', function(event) {
         if (this.hash !== "") {
