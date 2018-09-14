@@ -1,87 +1,43 @@
 /* Imports */
-
 @import url('https://fonts.googleapis.com/css?family=Lobster|Raleway:300,400,700');
-
 /* Variables */
-
 :root {
+  /* Fonts */
   --raleway: 'Raleway', sans-serif;
   --lobster: 'Lobster', cursive, sans-serif;
-
+  /* Colors */
   --white: #fafafa;
+  --black: #222;
   --orange: #f7472a;
+  --light-orange: #ff5b2d;
   --light-shadow: rgba(0, 0, 0, .2);
   --dark-shadow: rgba(0, 0, 0, .6);
 }
-
 /* OOCSS */
-
 .font-bold {
   font-weight: bolder;
 }
-
-/* Style */
-
-body {
-  position: relative;
-}
-
-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 99999;
-  width: 100%;
-  height: 60px;
-  padding: 0 40px;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-
-.navbar {
-  margin-bottom: 0;
-}
-
-.navbar li,
-.navbar a {
-  height: 60px;
-  margin: 0;
-  color: var(--white);
-  text-shadow: 1px 1px 2px var(--dark-shadow);
-}
-
-.nav-pills > li > a {
-  border-radius: 0;
-  display: flex;
-  align-items: center;
-}
-
-.nav-pills > li.active > a,
-.nav-pills > li.active > a:focus,
-.nav-pills > li.active > a:hover,
-.nav > li > a:hover {
-  background: var(--dark-shadow);
-}
-
-.nav-pills > li + li {
-  margin-left: 0;
-} */
-
-span.fa.fa-bars {
-  color: var(--dark-shadow);
-  font-size: 25px;
+.section-header {
+  font-family: var(--lobster);
+  font-size: 70px;
+  color: var(--orange);
   text-shadow: 1px 1px 3px var(--dark-shadow);
 }
-
-.logo {
-  display: inline-block;
+/* Style */
+body {
+  position: relative;
+  font-family: var(--raleway);
 }
-
+.navbar-brand {
+  padding: 10px 15px;
+}
+span.fa.fa-bars {
+  color: var(--white);
+  font-size: 25px;
+}
 .cutlery-logo {
   width: 250px;
 }
-
 .carousel-caption {
   height: 100%;
   position: absolute;
@@ -91,27 +47,26 @@ span.fa.fa-bars {
   align-items: center;
   flex-direction: column;
 }
-
 .carousel-caption > .btn {
   background: var(--orange);
   border: none;
 }
-
 .carousel-inner > .item > img {
   width: 100%;
 }
-
-#story, #review, #menu, #contact {
+#story,
+#review,
+#menu,
+#contact {
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 50px 0;
 }
-
 #story {
   background: var(--white);
 }
-
 .story-left {
   display: flex;
   justify-content: center;
@@ -119,23 +74,13 @@ span.fa.fa-bars {
   flex-direction: column;
   margin-top: 90px;
 }
-
-.story-header {
-  font-family: var(--lobster);
-  font-size: 70px;
-  color: var(--orange);
-  text-shadow: 1px 1px 3px var(--dark-shadow);
-}
-
 .story-tag {
   font-size: 24px;
 }
-
 .story-right {
   display: flex;
   align-items: center;
 }
-
 .year {
   position: absolute;
   font-family: var(--lobster);
@@ -143,7 +88,6 @@ span.fa.fa-bars {
   color: var(--light-shadow);
   margin: 0;
 }
-
 .container-border::before {
   content: '';
   display: block;
@@ -152,49 +96,59 @@ span.fa.fa-bars {
   border-radius: 2px;
   margin-bottom: 50px;
 }
-
 #review {
   background: url('../img/food_review.jpg');
   background-size: cover;
 }
-
 .review-info {
   background: var(--dark-shadow);
   border-radius: 4px;
   text-align: center;
   padding: 20px;
 }
-/*
-.review-header {
-  color: var(--orange);
-  font-family: var(--lobster);
-  font-size: 70px;
-  text-shadow: 1px 1px 3px var(--dark-shadow);
-} */
-
 .review-body {
   color: var(--white);
   font-size: 20px;
   font-family: var(--raleway);
 }
-
 #menu {
-  background:url('../img/black_linen.png')
+  background: url('../img/black_linen.png');
   background-size: cover;
   flex-direction: column;
 }
-
 #menu .section-header {
   color: white;
 }
-
+.tab-container {
+  margin-top: 50px;
+}
+.tab-container a {
+  color: var(--white);
+}
+.tab-container a:hover {
+  color: var(--black);
+}
+.tab-content {
+  background: var(--white);
+  height: 450px;
+}
 .tab-pane {
-  height: 500px;
-  background: #fff;
+  padding: 20px 0;
 }
-
 #contact {
-  background: dodgerblue;
+  background: var(--orange);
 }
-
-@media screen and (max-width:767px;)
+@media screen and (max-width: 767px) {
+  #menu {
+    height: 100%;
+  }
+  .navbar-brand {
+    margin-top: 5px;
+  }
+  .tab-content {
+    height: 100%;
+  }
+  .tab-pane img {
+    max-width: 200px;
+  }
+}
